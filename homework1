@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <title> CS 601 Fall 2017 HW 1 Daniel Budris</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .align-left {
+            text-align: left;
+        }
+        .center {
+            text-align: center;
+        }
+        .big {
+            font-size: 24px;
+        }
+        .list-style {
+            list-style-type: circle;
+        }
+        .table-border {
+            border-right: 1px solid black;
+        }
+        .headers {
+            font-weight: bold;
+        }
+        .table {
+            display: table;
+            text-align: center;
+            width: 100%;
+        }
+        .tableR {
+            display: table-row;
+            text-align: left;
+            width: 25%
+        }
+        .tableH {
+            display: table-cell;
+            font-weight: bold;
+            text-align: left;
+            width: 25%;
+        }
+        .tableC {
+            display: table-cell;
+            font-weight: normal;
+            text-align: left;
+            width: 25%;
+        }
+    </style>    
+  </head>
+  <body>
+    <h1 class="center"> Daniel Budris </h1>
+    <p class="center headers big"> Full Stack Operations Engineer</p>
+    <div class="table">
+        <div class="tableR">
+            <div class="tableH"> D.C.Budris@gmail.com </div>
+            <div class="tableH"> 111 Cross Street #1 Somerville MA</div>
+            <div class="tableH"> 857 293 8297</div>
+        </div>
+    </div>
+    <h2>Technologies</h2>
+    <p>
+        <span class="headers">Tools:</span> Terraform, SaltStack, Docker, Jenkins, TeamCity, Rundeck, AWS Lambda, AWS EC2 Container Service      
+    </p>
+    <p>
+        <span class="headers">Operating Systems:</span> Windows Server, Ubuntu, CentOS, Mac OSX
+    </p>
+    <p>
+        <span class="headers">Languages, Frameworks and Libraries:</span> Python (Flask, Boto3, TKinter), PowerShell (DSC, AWS), Bash, SQL (SQL Server, PostgreSql)
+    </p>
+    <p>
+        <span class="headers">Monitoring:</span> Splunk, Zabbix, NewRelic, CloudWatch, Snort
+    </p>
+    <p>
+        <span class="headers">Platforms:</span> Amazon Web Services (VPC, EC2, ECS, Lambda)
+    </p>
+    <h2>Professional Experience</h2>
+    <div class="table">
+        <div class="tableR">
+            <div class="tableH">EF Education First</div>
+            <div class="tableH">Systems Engineer</div>
+            <div class="tableH">October 2016 to Present</div>
+            <div class="tableH">Cambridge, MA</div>
+        </div>
+    </div>
+    <ul class="list-style">
+        <li>Proposed and implemented an <abbr title="Infrastructure as Code">IaC</abbr> Pipeline to speed the deployment of tested, versioned systems infrastructure</li>
+        <li>Act as subject matter expert on infrastructure automation and orchestration</li>
+        <li>Leveraged infrastructure automation tools to enable a team of 4 to rapidly migrate 10 applications, composed of 600 severs, to <abbr title="Amazon Web Services">AWS</abbr> in 6 months</li>
+        <li>Worked with developers and system administrators to automate tasks and build systems tools in Python, Powershell and Bash</li>
+        <li>Automated server provisioning and configuration in AWS with Terraform, Salt and Python</li>
+        <li>Built a REST API-backed self-service portal for ad-hoc and programatic access to systems and infrastructure tasks </li>
+        <li>Planned and implemented resource scheduling in AWS EC2, resulting in more than $115,000 in anual savings</li> 
+        <li>Implemented in-depth network monitoring by integrating Splunk, Slack, and AWS Cloudwatch using Python and AWS Lambda</li>
+    </ul>
+    <div class="table">
+        <div class="tableR">
+            <div class="tableH">Arclight Information Technology</div>
+            <div class="tableH">Systems Engineer</div>
+            <div class="tableH">May 2016 to October 2016</div>
+            <div class="tableH">Newton, MA</div>
+        </div>
+    </div>
+    <ul class="list-style" class="list-style">
+        <li>Supported the strategic technology needs of companies in the legal, financial services and technology industries throughout Greater Boston</li>
+        <li>Consulted with clients on their technical needs, and implemented solutions that met their budget</li>
+        <li>Installed and configured networking equipment including Fortigate firewalls, Cisco swithes and routers, and Meraki access points</li>
+        <li>Acted as a 'fixer' for my clients; whatever issue they faced; from malfunctioning security systems to failing server clusters to (once) a dental X-Ray machine, I was there to fix it -- or find someone who could</li>   
+    </ul>
+    <div class="table">
+        <div class="tableR">
+            <div class="tableH">Corporate Accountability International</div>
+            <div class="tableH">Systems Administrator</div>
+            <div class="tableH">February 2014 to May 2016</div>
+            <div class="tableH">Boston, MA</div>
+        </div>
+    </div>
+    <ul class="list-style">
+        <li>Managed all aspects of technology for a vibrant, internation campaign organization with 60 staff</li>
+        <li>Implemented modern security best practices: network segmentation, disk endcryption, intrusion detection, and network monitoring</li>
+        <li>Managed an active directory domain</li>
+        <li>Manged Google Apps for business</li>
+        <li>Purchased, configured and managed all technology assets; laptops, desktops, servers, software, domains, certificates, network equipment, VC equipment, phones, and everything in between</li>
+        <li>Led organizational technology strategy planning and execution</li>
+        <li>Developed Salesforce modules for tracking technology assets</li>
+        <li>Worked with fundraising staff to automate routine tasks with Javascript and Powershell</li>
+        <li>Wrote and ran end-user training programs focused on building a self-reliant and sustainable technology culture</li>
+    </ul>
+    <h2>Education</h2>
+    <div class="table">
+        <div class="tableR">
+            <div class="tableH">Institution</div>
+            <div class="tableH">Degree</div>
+            <div class="tableH">Subject</div>
+            <div class="tableH">Status</div>
+        </div>
+        <div class="tableR">
+            <div class="tableC">Boston University</div>
+            <div class="tableC"><i>Master of Science</i></div>
+            <div class="tableC">Information Systems</div>
+            <div class="tableC">Expected May 2018</div>
+        </div>
+        <div class="tableR">
+            <div class="tableC">Indiana University of Pennsylvania</div>
+            <div class="tableC"><i>Bachelor of Arts</i></div>
+            <div class="tableC">Religious Studies</div>
+            <div class="tableC">Awarded May 2011</div>
+        </div>
+    </div>
+  </body>
+<html>
