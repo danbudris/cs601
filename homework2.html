@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title> CS 601 Fall 2017 HW2 Daniel Budris</title>
+        <style>
+        .headers{
+            font-weight: bold;
+            font-size: 15px;
+            margin: 15px;
+            text-align: center;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .button{
+            margin: 15px 15px 15px 15px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .display{
+            margin: 15px 15px 15px 15px;
+            text-align: center;
+            color: chartreuse;
+            background-color: black;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 10px;
+        }
+
+        .border{
+            border-style: solid;
+            border-color: navy;
+            border-width: 1px;
+            margin: 30px 10px 30px 10px;
+            width: auto;
+        }
+
+        h3{
+            font-size: 10px;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        input{
+            margin: 5px;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .labels {
+            margin: 5px;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .result {
+            margin: 5px;
+            padding: 3px;
+            font-size: 18px;
+            text-align: center;
+            border: 1px;
+            border-style: dashed;
+        }
+
+    </style>
+    </head>
+    <body>
+        <h1 class="headers border"> Homework 2 : Dan Budris : CS 673 : Fall 2017</h1>
+        <div id="2.A" class="border">
+            <h3> Section 2.A </h3>
+            <h3> Press Button to Start/Stop Timer </h3>
+            <button id="2AButton" class="button"> Start Timer </button>
+            <div id="2.A.1" class="display"> 00/00/00, 00:00:00 </div>
+            <script> 
+                    var button2a = document.getElementById("2AButton");
+
+                    function set_time(){ 
+                        var rightMeow = new Date();
+                        document.getElementById("2.A.1").innerHTML = rightMeow.toLocaleString();
+                    };
+
+                    var timer_on = 0;
+
+                    button2a.addEventListener("click", function() {
+                        if(timer_on == 0){
+                            document.getElementById("2AButton").innerHTML = "Stop Timer";
+                            document.getElementById("2AButton").style.color = "red";
+                            document.getElementById("2.A.1").innerHTML = new Date().toLocaleString();
+                            timer_on = window.setInterval(set_time, 1000);
+                            console.log("on")
+                        }
+                        else
+                        {
+                            window.clearInterval(timer_on);
+                            timer_on = 0;
+                            document.getElementById("2AButton").style.color = "black";
+                            document.getElementById("2AButton").innerHTML = "Start Timer"
+                            console.log("off")
+                        }
+                    });
+                </script>
+        </div>
+        <div id="2.B" class="border">
+            <h3> Section 2.B </h3>
+            <div id="2.B.1" class="border">
+            <h3> Section 2.B.1 </h3>
+            <h3> Calculate the Area of a Square (or other rectangle) </h3>
+                <div class="labels">
+                    Height:
+                    <br>
+                    <input id="quad_height" type="number" name="height" value="2">
+                    <br>
+                    Length:
+                    <br>
+                    <input id="quad_length" type="number" name="length" value="2">
+                    <br>
+                    <button id="2BButton" class="button"> Calculate </button>
+                </div>
+                <div id="2b_result" class="result">Result</div>
+            
+            
+                <script>
+
+                    var button2b = document.getElementById("2BButton");
+
+                    button2b.addEventListener("click", function(){
+                        var area = (document.getElementById("quad_height").value) * (document.getElementById("quad_length").value);
+                        document.getElementById("2b_result").innerHTML = area;
+                        console.log(area);
+                    });
+
+                </script>
+            </div>
+            <div id="2.B.2" class="border">
+                <h3> Section 2.B.2 </h3>
+                <h3> Calculate the Area of a Triangle </h3>
+                <div class="labels">
+                        Side 1:
+                        <br>
+                        <input id="tri_1" type="number" value="3">
+                        <br>
+                        Side 2:
+                        <br>
+                        <input id="tri_2" type="number" value="4">
+                        <br>
+                        Side 3:
+                        <input id="tri_3" type="number" value="5">
+                        <br>
+                        <button id="2B2Button" class="button"> Calculate </button>
+                    </div>
+                    <div id="2b2_result" class="result">Result</div>
+
+                <script>
+
+                    var button2b2 = document.getElementById("2B2Button");
+
+                    //calculate the area of the triangle using Heron's Formula
+                    button2b2.addEventListener("click",function(){
+                        var a = Number(document.getElementById("tri_1").value);
+                        var b = Number(document.getElementById("tri_2").value);
+                        var c = Number(document.getElementById("tri_3").value);
+                        var p = ((a + b + c)*.5);
+                        x = (p * (p - a) * (p - b) * (p - c));
+                        var area = Math.sqrt(x)
+                        document.getElementById("2b2_result").innerHTML = area;
+                    });
+                </script>
+            </div>
+            <div id="2.B.3" class="border">
+                <h3> Section 2.B.3 </h3>
+                <h3> Calculate the Area of a Circle </h3>
+                <div class="labels">
+                    Radius:
+                    <br>
+                    <input id="circ_1" type="number" value="4">
+                    <br>
+                    <button id="2B3Button" class="button"> Calculate</button>
+                </div>
+                <div id="2b3_result" class="result">Result</div>
+
+                <script>
+                    
+                    var button2b3 = document.getElementById("2B3Button");
+
+                    button2b3.addEventListener("click", function(){
+                        var r = Number(document.getElementById("circ_1").value);
+                        var area = Math.PI * (r * r);
+                        document.getElementById("2b3_result").innerHTML=area;
+                    });
+
+                </script>
+            </div>
+        </div>
+        <div id="2.C" class="border">
+            <h3> Section 2.C </h3>
+            <h3> Calculate Days Until the End of the Semester</h3>
+            <h3> Using CS 601 Final Exam on Monday, December 18th 2017 at 8:45:00 pm as the End Time</h3>
+            <div id="2c_result" class="result">RESULT</div>
+            <script>
+                
+                function days_till_end(){
+                    var today = new Date();
+                    var final_exam = new Date("December 18, 2017 08:45:00");
+                    var diff = Math.round(final_exam - today)/(1000*60*60*24);
+                    document.getElementById("2c_result").innerHTML = diff;
+                };
+
+                start_count = window.setInterval(days_till_end, 1000);
+                console.log(diff);
+            </script>
+        </div>
+    </body>
+</HTML>
